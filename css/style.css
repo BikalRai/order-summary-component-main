@@ -1,0 +1,147 @@
+:root {
+    --primary-paleblue: hsl(225, 100%, 94%);
+    --primary-brightblue: hsl(245, 75%, 52%);
+    --neutral-paleblue: hsl(225, 100%, 98%);
+    --neutral-destatblue: hsl(224, 23%, 55%);
+    --neutral-darkblue: hsl(223, 47%, 23%);
+    --hover-color: hsl(245, 64%, 62%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display";
+    color: var(--neutral-destatblue);
+    font-weight: 500;
+}
+
+body {
+    background: var(--primary-paleblue);
+}
+
+/* container styles */
+.component {
+    margin: 4rem auto;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    box-shadow: 0 10px 100px -50px var(--primary-paleblue),
+        0 5px 50px -30px var(--neutral-destatblue);
+}
+
+/* img styles */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* text styles */
+.component__details {
+    padding: 1.5rem;
+    text-align: center;
+
+    display: grid;
+    row-gap: 2rem;
+
+    background: rgba(255, 255, 255, 1);
+}
+
+.component__details > h2 {
+    font-weight: 900;
+    color: var(--neutral-darkblue);
+}
+
+/* pricing style */
+.pricing,
+.pricing__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.pricing {
+    background: hsl(225, 100%, 98%);
+    border-radius: 0.5rem;
+    padding: 1em;
+}
+
+.pricing > .pricing__details > img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.pricing > .pricing__details > .pricing__detail > .price-heading {
+    color: var(--neutral-darkblue);
+    font-weight: 900;
+}
+
+.pricing > a {
+    color: var(--primary-brightblue);
+    font-weight: 700;
+}
+
+.pricing > a:hover {
+    text-decoration: none;
+    color: var(--hover-color);
+    transition: 0.4s ease;
+}
+
+/* buttons */
+.pay__btn {
+    background: var(--primary-brightblue);
+    color: var(--neutral-paleblue);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1em;
+    box-shadow: 2px 10px 30px -10px var(--primary-brightblue);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.pay__btn:hover {
+    background: var(--hover-color);
+}
+
+.cancel__btn {
+    border: none;
+    padding-bottom: 0.5em;
+    color: var(--neutral-destatblue);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+    background: transparent;
+}
+
+.cancel__btn:hover {
+    color: var(--neutral-darkblue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+    .component {
+        width: 60%;
+    }
+}
+
+@media (min-width: 700px) {
+    .component {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .component {
+        width: 30%;
+    }
+}
